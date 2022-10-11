@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-11T18:13:16.009Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="lK1MMpPpkBXqqkn-mRCd" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-11T18:25:08.533Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="cUSpJIiIAOWb_I5Ob_2e" version="20.0.4" type="github">
   <diagram id="813XCrAcMFzqeUaRMn21" name="Page-1">
-    <mxGraphModel dx="460" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,13 +16,13 @@
         <mxCell id="YsivHbSO6IKAK6VpmbdO-4" value="제목&lt;br&gt;내용&lt;br&gt;가전 제어 종류&lt;br&gt;시작 시간&lt;br&gt;입력" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="41" y="440" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-5" value="mqtt" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-4" target="YsivHbSO6IKAK6VpmbdO-8">
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-5" value="mqtt:{title, content, &lt;br&gt;control, time}" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="220" y="505" as="sourcePoint" />
-            <mxPoint x="320" y="500" as="targetPoint" />
+            <mxPoint x="153" y="480" as="sourcePoint" />
+            <mxPoint x="342" y="480" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="220" y="530" />
-              <mxPoint x="260" y="460" />
+              <mxPoint x="222" y="530" />
+              <mxPoint x="262" y="460" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -41,8 +41,25 @@
         <mxCell id="YsivHbSO6IKAK6VpmbdO-9" value="끝" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="480" y="450" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-11" value="activitymanager로&lt;br&gt;시작 시간에&amp;nbsp;&lt;br&gt;mqtt publish 예약" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="600" width="120" height="60" as="geometry" />
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-11" value="시작 시간에&amp;nbsp;&lt;br&gt;mqtt publish 예약" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="319" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-14" value="activitymanager" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="615" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-15" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="630" y="585" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-18" value="mqtt: {device, on/off}}" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-11" target="YsivHbSO6IKAK6VpmbdO-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="620" as="sourcePoint" />
+            <mxPoint x="650" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="680" />
+              <mxPoint x="540" y="640" />
+              <mxPoint x="580" y="590" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
