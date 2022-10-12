@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-11T18:43:22.956Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="lL_JWwWpqygEJDyTQIQC" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-12T07:39:23.465Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="qoUG6IlZ4vVa2zSKNWw-" version="20.0.4" type="github">
   <diagram id="813XCrAcMFzqeUaRMn21" name="Page-1">
-    <mxGraphModel dx="1038" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1278" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="YsivHbSO6IKAK6VpmbdO-3" value="esp32" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="320" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-4" value="제목&lt;br&gt;내용&lt;br&gt;가전 제어 종류&lt;br&gt;시작 시간&lt;br&gt;입력" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-4" value="router.post(&quot;/&quot;)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="41" y="440" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="YsivHbSO6IKAK6VpmbdO-5" value="mqtt:{title, content, &lt;br&gt;control, time}" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
@@ -35,19 +35,16 @@
             <mxPoint x="379" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-8" value="가전 제어&lt;br&gt;alert" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-8" value="alert(params)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="440" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="YsivHbSO6IKAK6VpmbdO-9" value="끝" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="470" y="450" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-11" value="시작 시간에&amp;nbsp;&lt;br&gt;mqtt publish 예약" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-11" value="createActivity&lt;br&gt;(url, time)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="319" y="600" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-14" value="activitymanager" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="240" y="615" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-15" value="가전 제어 수행&lt;br&gt;(led/window/ blind,&lt;br&gt;on/off)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-15" value="callback()&lt;br&gt;loop()" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="609.5" y="550" width="101" height="101" as="geometry" />
         </mxCell>
         <mxCell id="YsivHbSO6IKAK6VpmbdO-18" value="mqtt: {device, on/off}}" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-11" target="YsivHbSO6IKAK6VpmbdO-15">
@@ -61,26 +58,30 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-33" value="led" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-21" target="YsivHbSO6IKAK6VpmbdO-15">
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-33" value="led" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.113;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-39" target="YsivHbSO6IKAK6VpmbdO-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-21" value="버튼" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="550" y="440" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-34" value="window/blind" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-23" target="YsivHbSO6IKAK6VpmbdO-15">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-23" value="조이스틱" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="690" y="440" width="80" height="40" as="geometry" />
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-34" value="window/blind" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="YsivHbSO6IKAK6VpmbdO-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="480" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="730" y="484" />
+              <mxPoint x="730" y="515" />
+              <mxPoint x="660" y="515" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="YsivHbSO6IKAK6VpmbdO-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="YsivHbSO6IKAK6VpmbdO-36" target="YsivHbSO6IKAK6VpmbdO-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YsivHbSO6IKAK6VpmbdO-36" value="UI 제어" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="319" y="720" width="120" height="60" as="geometry" />
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-36" value="LightToggle()&lt;br&gt;CheckBox()&lt;br&gt;CheckBox2()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="720" width="169" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YsivHbSO6IKAK6VpmbdO-37" value="webApp" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="250" y="740" width="60" height="30" as="geometry" />
+          <mxGeometry x="200" y="735" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YsivHbSO6IKAK6VpmbdO-39" value="loop()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="440" width="180" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
